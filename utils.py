@@ -1,6 +1,4 @@
-import os
 import json
-
 
 def load_jds():
     with open("jd_sample.json", "r") as f:
