@@ -7,11 +7,13 @@ def load_jds():
         return json.load(f)
 
 def call_llm_api(prompt):
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    # MOCKED response for testing without OpenAI key
+    return """### 🔍 Matching Internships:
 
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}]
-    )
+1. **Data Science Intern at Flipkart** – Your Python and SQL skills align perfectly with this role.
 
-    return response.choices[0].message.content
+2. **Analytics Intern at BCG** – Your experience with dashboards in Power BI/Tableau makes you a great fit.
+
+🧠 Tip: Consider improving your deployment skills with Streamlit or Flask for bonus points!
+"""
+
